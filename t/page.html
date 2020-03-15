@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<style>
+	p{padding: 0; margin: 0;}
+	body{background: #D5D5D5;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+</head>
+<body style="margin: 0; padding: 0;">
+<div style="position: fixed; display: block; width: 100%; background: #C0B9B9; top: 7px; padding: 5px; margin: 0;">
+<p>Сортировать по: 
+<button onClick="sort('score_rank');">Позиция в топе</button> 
+<button onClick="sort('name');">Название игры</button> 
+<button onClick="sort('developer');">Разработчик</button>
+<button onClick="location.reload();">Сбросить сортировку</button>
+</p>
+</div>
+<div name="games" style="width: 100%; display: block; margin-top: 42px;">
+</div>
+
+
+<script language="javascript">
+function sort(sortBy,byDev='') {
+
+  var sortByDev = byDev;
+  var sort = sortBy;
+  var nodeList = document.querySelectorAll('div[name="game"]');
+  var itemsArray = [];
+  var parent = nodeList[0].parentNode;
+	
+  for (var i = 0; i < nodeList.length; i++) {    
+    itemsArray.push(parent.removeChild(nodeList[i]));
+  }	
+	
+	  itemsArray.sort(function(nodeA, nodeB) {
+		  var textA = nodeA.querySelector('span[name="'+sort+'"]').textContent;	 
+		  var textB = nodeB.querySelector('span[name="'+sort+'"]').textContent; 
+			var intA = parseInt(textA);
+			var intB = parseInt(textB);
+				  if (intA < intB) return -1;
+				  if (intA > intB) return 1; 
+				  if (textA < textB) return -1;
+				  if (textA > textB) return 1; 
+			  return 0; 
+
+		})
+		.forEach(function(node) {
+		  if(sortByDev==''){
+			  parent.appendChild(node);
+		  }else{
+		 	var textA = node.querySelector('span[name="'+sort+'"]').textContent;
+			if(textA.indexOf(sortByDev)!== -1) parent.appendChild(node);
+		  }
+
+		});
+
+	}
+
+	
+</script>
+</body>
+</html>
