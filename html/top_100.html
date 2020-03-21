@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	p{padding: 0; margin: 0;}
+	body{background: #D5D5D5;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+</head>
+<body style="margin: 0; padding: 0;">
+<div style="position: fixed; display: block; width: 100%; background: #C0B9B9; top: 7px; padding: 5px; margin: 0;">
+<p>Сортировать по: 
+<button onclick="sort('score_rank');">Позиция в топе</button> 
+<button onclick="sort('name');">Название игры</button> 
+<button onclick="sort('developer');">Разработчик</button>
+<button onclick="location.reload();">Сбросить сортировку</button>
+</p>
+</div>
+<div name="games" style="width: 100%; display: block; margin-top: 42px;">
+<curiosity><div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>10</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Counter-Strike</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>9</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>10647</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>158</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>202</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>190</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>1499999</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>3837</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>30</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Day of Defeat</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a><a onClick="sort('developer',' Feral Interactive');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral Interactive </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>70</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>85</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>26</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>3979</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>470</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>40</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Deathmatch Classic</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>100</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','2,000,000 .. 5,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 2,000,000 .. 5,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>49</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>46</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>1479</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>322</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>50</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life: Opposing Force</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Gearbox Software');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Gearbox Software </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>52</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>244</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>84</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>1</curiosity></span></p>
+<p>price: <span name="price"><curiosity>499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>7168</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>405</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>60</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Ricochet</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>78</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>24</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>5</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>3147</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>747</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>70</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>40</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>510</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>142</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>83</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>148</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>39130</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1460</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>130</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life: Blue Shift</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Gearbox Software');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Gearbox Software </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>62</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>140</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>68</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>5166</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>566</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>220</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>27</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>646</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>11</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>284</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>11</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>87574</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>2722</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>240</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Counter-Strike: Source</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>17</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>8545</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>209</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>418</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>96</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>95866</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>4095</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>300</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Day of Defeat: Source</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>76</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>271</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>121</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>1</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>12181</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1354</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>320</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life 2: Deathmatch</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a><a onClick="sort('developer',' Nexon Korea Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Nexon Korea Corporation </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>47</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>572</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>4</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>80</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>4</curiosity></span></p>
+<p>price: <span name="price"><curiosity>499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>7047</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>852</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>340</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life 2: Lost Coast</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>15</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>52</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>28</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>6534</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1081</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>360</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life Deathmatch: Source</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>28</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>22</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>18</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>17</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>18</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>1684</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>549</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>380</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life 2: Episode One</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>77</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>343</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>94</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>209</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>153</curiosity></span></p>
+<p>price: <span name="price"><curiosity>799</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>799</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>10409</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>612</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>400</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Portal</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>53</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>348</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>199</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>182</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>199</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>63533</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1220</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>420</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Half-Life 2: Episode Two</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>61</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>444</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>133</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>226</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>133</curiosity></span></p>
+<p>price: <span name="price"><curiosity>799</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>799</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>17225</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>753</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>440</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Team Fortress 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>3</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','20,000,000 .. 50,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 20,000,000 .. 50,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>9736</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1248</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>370</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>455</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>599168</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>37663</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>500</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Left 4 Dead</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>63</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>4547</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1500</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>112</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>1500</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>23391</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1122</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>550</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Left 4 Dead 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>10</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2102</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>195</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>477</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>107</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>320014</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>9917</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>570</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Dota 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>1</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','100,000,000 .. 200,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 100,000,000 .. 200,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>28045</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1692</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>991</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>747</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>1043658</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>180916</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>620</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Portal 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>31</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1147</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>70</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>481</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>88</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>177354</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>2310</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>730</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Counter-Strike: Global Offensive</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a><a onClick="sort('developer',' Hidden Path Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Hidden Path Entertainment </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>2</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','100,000,000 .. 200,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 100,000,000 .. 200,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>25386</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>938</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>7528</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>357</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>3439884</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>487537</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>4000</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Garry's Mod</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Facepunch Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Facepunch Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>13</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>8612</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>572</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1263</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>160</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>485521</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>19177</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>8930</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Sid Meier's Civilization V</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Firaxis Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Firaxis Games </a><a onClick="sort('developer',' Aspyr (Mac)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Aspyr (Mac) </a><a onClick="sort('developer',' Aspyr (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Aspyr (Linux) </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','2K, Aspyr (Mac), Aspyr (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 2K, Aspyr (Mac), Aspyr (Linux) </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>39</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>6642</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>496</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>2654</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>653</curiosity></span></p>
+<p>price: <span name="price"><curiosity>2999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>147310</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>5995</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>10180</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Call of Duty: Modern Warfare 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Infinity Ward');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Infinity Ward </a><a onClick="sort('developer',' Feral');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Activision');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Activision </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>71</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1188</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>127</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>501</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>127</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>34007</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>2997</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>15700</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Oddworld: Abe's Oddysee</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Oddworld Inhabitants');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Oddworld Inhabitants </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Oddworld Inhabitants');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Oddworld Inhabitants </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>81</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>204</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>230</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>299</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>299</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>2949</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>479</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>44350</curiosity></span></p>
+<p>name: <span name="name"><curiosity>GRID 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Codemasters Racing');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Codemasters Racing </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Codemasters');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Codemasters </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>36</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>345</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>32</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>172</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>48</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>19084</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>4106</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>49520</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Borderlands 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Gearbox Software');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Gearbox Software </a><a onClick="sort('developer',' Aspyr (Mac)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Aspyr (Mac) </a><a onClick="sort('developer',' Aspyr (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Aspyr (Linux) </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','2K, Aspyr (Mac), Aspyr (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 2K, Aspyr (Mac), Aspyr (Linux) </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>22</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2782</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>76</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1002</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>104</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>202002</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>12722</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>72850</curiosity></span></p>
+<p>name: <span name="name"><curiosity>The Elder Scrolls V: Skyrim</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Bethesda Game Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bethesda Game Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Bethesda Softworks');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bethesda Softworks </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>54</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>9318</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>39</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>3763</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>22</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>258760</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>15211</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>96000</curiosity></span></p>
+<p>name: <span name="name"><curiosity>The Tiny Bang Story</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Colibri Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Colibri Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Colibri Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Colibri Games </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>35</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>326</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>306</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>4363</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>625</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>105600</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Terraria</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Re-Logic');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Re-Logic </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Re-Logic');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Re-Logic </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>25</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>6598</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>770</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1867</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>452</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>406922</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>9603</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>109600</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Neverwinter</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Cryptic Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Cryptic Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Perfect World Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Perfect World Entertainment </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>82</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1205</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>135</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>402</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>135</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>20592</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>6002</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>113400</curiosity></span></p>
+<p>name: <span name="name"><curiosity>APB Reloaded</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Little Orbit');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Little Orbit </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Little Orbit');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Little Orbit </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>94</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3334</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>453</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>132</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>826</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>21312</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>12328</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>203160</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Tomb Raider</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Crystal Dynamics');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Crystal Dynamics </a><a onClick="sort('developer',' Eidos-Montréal');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Eidos-Montréal </a><a onClick="sort('developer',' Feral Interactive (Mac)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral Interactive (Mac) </a><a onClick="sort('developer',' Feral Interactive (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral Interactive (Linux) </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Square Enix, Feral Interactive (Mac), Feral Interactive (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Square Enix, Feral Interactive (Mac), Feral Interactive (Linux) </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>72</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>851</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>28</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>523</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>28</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>107486</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>4509</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>204360</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Castle Crashers</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','The Behemoth');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> The Behemoth </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','The Behemoth');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> The Behemoth </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>93</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>618</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>312</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>335</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>312</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>59360</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>2441</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>208090</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Loadout</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Edge of Reality');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Edge of Reality </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Edge of Reality');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Edge of Reality </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>83</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>531</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>100</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>35406</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>5546</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>218230</curiosity></span></p>
+<p>name: <span name="name"><curiosity>PlanetSide 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Rogue Planet Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Rogue Planet Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Daybreak Game Company');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Daybreak Game Company </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>41</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1967</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>420</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>184</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>607</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>40215</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>8628</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>218620</curiosity></span></p>
+<p>name: <span name="name"><curiosity>PAYDAY 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','OVERKILL - a Starbreeze Studio.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> OVERKILL - a Starbreeze Studio. </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Starbreeze Publishing AB');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Starbreeze Publishing AB </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>18</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>4298</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1719</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>709</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>466</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>361293</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>57494</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>219640</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Chivalry: Medieval Warfare</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Torn Banner Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Torn Banner Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Torn Banner Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Torn Banner Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>80</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>967</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>177</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>240</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>177</curiosity></span></p>
+<p>price: <span name="price"><curiosity>2499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>53625</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>11559</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>219740</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Don't Starve</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Klei Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Klei Entertainment </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Klei Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Klei Entertainment </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>87</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2490</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1779</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>226</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>3217</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>70479</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>2341</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>219990</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Grim Dawn</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Crate Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Crate Entertainment </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Crate Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Crate Entertainment </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>23</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2053</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>387</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1055</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>387</curiosity></span></p>
+<p>price: <span name="price"><curiosity>624</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>75</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>40522</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>3308</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>221380</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Age of Empires II (2013)</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Skybox Labs');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Skybox Labs </a><a onClick="sort('developer',' Hidden Path Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Hidden Path Entertainment </a><a onClick="sort('developer',' Ensemble Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Ensemble Studios </a><a onClick="sort('developer',' Forgotten Empires');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Forgotten Empires </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Xbox Game Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Xbox Game Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>67</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1393</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>41</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>561</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>58</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>69965</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>3602</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>227300</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Euro Truck Simulator 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','SCS Software');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> SCS Software </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','SCS Software');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> SCS Software </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>56</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>5775</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>292</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1535</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>82</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>261627</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>7362</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>227940</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Heroes & Generals</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','RETO MOTO');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> RETO MOTO </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','RETO MOTO');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> RETO MOTO </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>20</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1370</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>2515</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>69</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>3865</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>75736</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>37485</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>230410</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Warframe</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Digital Extremes');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Digital Extremes </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Digital Extremes');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Digital Extremes </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>6</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','20,000,000 .. 50,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 20,000,000 .. 50,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>5958</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>348</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>432</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>87</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>305485</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>29262</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>231430</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Company of Heroes 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Relic Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Relic Entertainment </a><a onClick="sort('developer',' Feral Interactive (Mac)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral Interactive (Mac) </a><a onClick="sort('developer',' Feral Interactive (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral Interactive (Linux) </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','SEGA, Feral Interactive (Mac), Feral Interactive (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> SEGA, Feral Interactive (Mac), Feral Interactive (Linux) </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>98</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','2,000,000 .. 5,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 2,000,000 .. 5,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1401</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>192</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>278</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>297</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>45185</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>13948</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>236390</curiosity></span></p>
+<p>name: <span name="name"><curiosity>War Thunder</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Gaijin Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Gaijin Entertainment </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Gaijin Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Gaijin Entertainment </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>19</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3095</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>736</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>275</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>339</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>112911</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>27618</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>238960</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Path of Exile</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Grinding Gear Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Grinding Gear Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Grinding Gear Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Grinding Gear Games </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>16</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>7627</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1658</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>306</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>706</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>112803</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>8117</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>239140</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Dying Light</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Techland');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Techland </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Techland Publishing');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Techland Publishing </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>97</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','2,000,000 .. 5,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 2,000,000 .. 5,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1758</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>380</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1162</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>305</curiosity></span></p>
+<p>price: <span name="price"><curiosity>3999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>3999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>129159</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>8021</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>242760</curiosity></span></p>
+<p>name: <span name="name"><curiosity>The Forest</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Endnight Games Ltd');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Endnight Games Ltd </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Endnight Games Ltd');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Endnight Games Ltd </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>99</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','2,000,000 .. 5,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 2,000,000 .. 5,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1490</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>225</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>825</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>237</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>151606</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>10358</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>252490</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Rust</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Facepunch Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Facepunch Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Facepunch Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Facepunch Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>34</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>11448</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>779</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>2299</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>605</curiosity></span></p>
+<p>price: <span name="price"><curiosity>3999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>3999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>333848</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>69235</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>252950</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Rocket League</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Psyonix LLC');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Psyonix LLC </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Psyonix LLC');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Psyonix LLC </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>26</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>10407</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>620</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1590</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>255</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>346125</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>36953</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>253710</curiosity></span></p>
+<p>name: <span name="name"><curiosity>theHunter Classic</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Expansive Worlds');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Expansive Worlds </a><a onClick="sort('developer',' Avalanche Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Avalanche Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Expansive Worlds, Avalanche Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Expansive Worlds, Avalanche Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>86</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>259</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>41</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>13540</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>15691</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>255710</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Cities: Skylines</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Colossal Order Ltd.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Colossal Order Ltd. </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Paradox Interactive');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Paradox Interactive </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>65</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2172</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>330</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>756</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>357</curiosity></span></p>
+<p>price: <span name="price"><curiosity>2999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>96357</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>8010</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>271590</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Grand Theft Auto V</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Rockstar North');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Rockstar North </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Rockstar Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Rockstar Games </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>7</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','20,000,000 .. 50,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 20,000,000 .. 50,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>10185</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>781</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>4575</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>370</curiosity></span></p>
+<p>price: <span name="price"><curiosity>2999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>584819</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>164269</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>272060</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Serena</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Senscape');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Senscape </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Senscape');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Senscape </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>12</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>116</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>22</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>4709</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1399</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>273110</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Counter-Strike Nexon: Studio</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve Corporation </a><a onClick="sort('developer',' Nexon Korea Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Nexon Korea Corporation </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Nexon Korea Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Nexon Korea Corporation </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>46</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2929</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>19973</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>53</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>19973</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>23747</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>12762</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>273350</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Evolve Stage 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Turtle Rock Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Turtle Rock Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','2K');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 2K </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>88</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>290</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>125</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>30678</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>14960</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>275390</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Guacamelee! Super Turbo Championship Edition</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','DrinkBox Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> DrinkBox Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','DrinkBox Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> DrinkBox Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>21</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>294</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>270</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>178</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>452</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>4189</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>351</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>278360</curiosity></span></p>
+<p>name: <span name="name"><curiosity>A Story About My Uncle</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Gone North Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Gone North Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Coffee Stain Publishing');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Coffee Stain Publishing </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>59</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>402</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>5</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>232</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>8</curiosity></span></p>
+<p>price: <span name="price"><curiosity>374</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>75</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>21912</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1903</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>285800</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Braveland</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Tortuga Team');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Tortuga Team </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Tortuga Team');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Tortuga Team </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>79</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1038</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>110</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>266</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>110</curiosity></span></p>
+<p>price: <span name="price"><curiosity>699</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>699</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>2007</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>421</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>291480</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Warface</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','MY.GAMES');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> MY.GAMES </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','MY.GAMES');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> MY.GAMES </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>29</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>902</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>11</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>151</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>13</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>37178</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>16326</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>291550</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Brawlhalla</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Blue Mammoth Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Blue Mammoth Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Ubisoft');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Ubisoft </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>8</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2538</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1163</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>175</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>199</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>112048</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>19925</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>292030</curiosity></span></p>
+<p>name: <span name="name"><curiosity>The Witcher 3: Wild Hunt</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','CD PROJEKT RED');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> CD PROJEKT RED </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','CD PROJEKT RED');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> CD PROJEKT RED </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>48</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3338</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>634</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>982</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>203</curiosity></span></p>
+<p>price: <span name="price"><curiosity>3999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>3999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>324951</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>6306</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>301520</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Robocraft</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Freejam');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Freejam </a><a onClick="sort('developer',' Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Freejam');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Freejam </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>42</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2202</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>6661</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>148</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>9991</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>83031</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>31878</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>304050</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Trove</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Trion Worlds');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Trion Worlds </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Trion Worlds');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Trion Worlds </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>57</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2755</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>6667</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>284</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>6660</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>54855</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>14575</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>304930</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Unturned</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Smartly Dressed Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Smartly Dressed Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Smartly Dressed Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Smartly Dressed Games </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>4</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','20,000,000 .. 50,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 20,000,000 .. 50,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3502</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>2088</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>377</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>471</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>330958</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>33781</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>319630</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Life is Strange - Episode 1</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','DONTNOD Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> DONTNOD Entertainment </a><a onClick="sort('developer',' Feral Interactive (Mac)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral Interactive (Mac) </a><a onClick="sort('developer',' Feral Interactive (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Feral Interactive (Linux) </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Square Enix, Feral interactive (Mac), Feral Interactive (Linux)');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Square Enix, Feral interactive (Mac), Feral Interactive (Linux) </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>85</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>388</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>161</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>142</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>161</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>127030</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>4875</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>322330</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Don't Starve Together</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Klei Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Klei Entertainment </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Klei Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Klei Entertainment </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>69</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2253</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>285</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>570</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>258</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>159453</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>5908</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>333930</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Dirty Bomb</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Splash Damage');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Splash Damage </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Warchest Ltd.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Warchest Ltd. </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>49</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1723</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>5016</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>119</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>10007</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>45949</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>10998</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>346110</curiosity></span></p>
+<p>name: <span name="name"><curiosity>ARK: Survival Evolved</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Studio Wildcard');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Studio Wildcard </a><a onClick="sort('developer',' Instinct Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Instinct Games </a><a onClick="sort('developer',' Efecto Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Efecto Studios </a><a onClick="sort('developer',' Virtual Basement LLC');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Virtual Basement LLC </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Studio Wildcard');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Studio Wildcard </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>60</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>9042</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>871</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1238</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>655</curiosity></span></p>
+<p>price: <span name="price"><curiosity>4999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>4999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>210549</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>72701</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>346900</curiosity></span></p>
+<p>name: <span name="name"><curiosity>AdVenture Capitalist</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Hyper Hippo Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Hyper Hippo Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Hyper Hippo Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Hyper Hippo Games </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>96</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2191</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>11</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>200</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>11</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>37694</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>4684</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>359550</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Tom Clancy's Rainbow Six Siege</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Ubisoft Montreal');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Ubisoft Montreal </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Ubisoft');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Ubisoft </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>11</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>10732</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>763</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>2511</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>334</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>502889</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>74618</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>363970</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Clicker Heroes</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Playsaurus');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Playsaurus </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Playsaurus');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Playsaurus </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>66</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>10962</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>7331</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>471</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>10967</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>45681</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>5082</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>365590</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Tom Clancy’s The Division</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Massive Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Massive Entertainment </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Ubisoft');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Ubisoft </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>55</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3670</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>474</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1043</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>474</curiosity></span></p>
+<p>price: <span name="price"><curiosity>3999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>3999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>53097</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>25954</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>370910</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Kathy Rain</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Clifftop Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Clifftop Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Raw Fury');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Raw Fury </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>44</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1086</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>269</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>2247</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>183</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>377160</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Fallout 4</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Bethesda Game Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bethesda Game Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Bethesda Softworks');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bethesda Softworks </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>84</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>5482</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>84</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>2233</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>151</curiosity></span></p>
+<p>price: <span name="price"><curiosity>2999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>140725</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>47716</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>381210</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Dead by Daylight</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Behaviour Digital Inc.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Behaviour Digital Inc. </a><a onClick="sort('developer',' Valve Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve Corporation </a><a onClick="sort('developer',' Activision');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Activision </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Behaviour Digital Inc.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Behaviour Digital Inc. </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>43</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>4786</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>530</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>951</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>293</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>220327</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>56343</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>386360</curiosity></span></p>
+<p>name: <span name="name"><curiosity>SMITE</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Titan Forge Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Titan Forge Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Hi-Rez Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Hi-Rez Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>37</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>5347</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>2254</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>164</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>1329</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>47028</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>11343</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>407530</curiosity></span></p>
+<p>name: <span name="name"><curiosity>ARK: Survival Of The Fittest</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Studio Wildcard');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Studio Wildcard </a><a onClick="sort('developer',' Instinct Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Instinct Games </a><a onClick="sort('developer',' Efecto Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Efecto Studios </a><a onClick="sort('developer',' Virtual Basement LLC');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Virtual Basement LLC </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Studio Wildcard');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Studio Wildcard </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>89</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>290</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>24</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>4999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>4999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>5155</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>3385</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>413150</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Stardew Valley</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','ConcernedApe');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> ConcernedApe </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','ConcernedApe');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> ConcernedApe </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>91</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3168</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>452</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>1401</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>344</curiosity></span></p>
+<p>price: <span name="price"><curiosity>1499</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>1499</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>207209</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>5261</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>417910</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Street Warriors Online</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Crazy Rocks Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Crazy Rocks Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Crazy Rocks Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Crazy Rocks Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>38</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>101</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>33</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>199</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>199</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>981</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>732</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>431960</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Wallpaper Engine</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Wallpaper Engine Team');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Wallpaper Engine Team </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Wallpaper Engine Team');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Wallpaper Engine Team </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>51</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1806</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>180</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>477</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>21</curiosity></span></p>
+<p>price: <span name="price"><curiosity>399</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>399</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>131878</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>2646</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>433850</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Z1 Battle Royale</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Daybreak Game Company');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Daybreak Game Company </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Daybreak Game Company');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Daybreak Game Company </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>32</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2603</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>2363</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>161</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>2159</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>114603</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>93784</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>438100</curiosity></span></p>
+<p>name: <span name="name"><curiosity>VRChat</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','VRChat Inc.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> VRChat Inc. </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','VRChat Inc.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> VRChat Inc. </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>64</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>847</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>742</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>54</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>1106</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>41714</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>4693</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>439700</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Z1 Battle Royale: Test Server</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Daybreak Game Company');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Daybreak Game Company </a><a onClick="sort('developer',' Valve Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve Corporation </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Daybreak Game Company');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Daybreak Game Company </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>45</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>98</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>0</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>24</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>0</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>1261</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>1085</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>444090</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Paladins</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Evil Mojo Games');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Evil Mojo Games </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Hi-Rez Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Hi-Rez Studios </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>14</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3086</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>862</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>393</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>142</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>210397</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>36477</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>444200</curiosity></span></p>
+<p>name: <span name="name"><curiosity>World of Tanks Blitz</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Wargaming Group Limited');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Wargaming Group Limited </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Wargaming Group Limited');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Wargaming Group Limited </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>68</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>4079</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>651</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>132</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>43</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>27589</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>8801</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>550650</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Black Squad</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','NS STUDIO');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> NS STUDIO </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','NS STUDIO');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> NS STUDIO </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>33</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2066</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>2175</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>74</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>1549</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>48852</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>14353</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>552990</curiosity></span></p>
+<p>name: <span name="name"><curiosity>World of Warships</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Wargaming Group Limited');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Wargaming Group Limited </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Wargaming Group Limited');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Wargaming Group Limited </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>74</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>916</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>382</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>151</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>471</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>24171</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>6161</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>555570</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Infestation: The New Z</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Fredaikis AB');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Fredaikis AB </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','OP Productions LLC');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> OP Productions LLC </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>92</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3396</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>10257</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>74</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>19944</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>15211</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>14759</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>578080</curiosity></span></p>
+<p>name: <span name="name"><curiosity>PLAYERUNKNOWN'S BATTLEGROUNDS</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','PUBG Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> PUBG Corporation </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','PUBG Corporation');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> PUBG Corporation </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>5</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','20,000,000 .. 50,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 20,000,000 .. 50,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>22212</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>883</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>9139</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>364</curiosity></span></p>
+<p>price: <span name="price"><curiosity>2999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>720809</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>615022</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>582010</curiosity></span></p>
+<p>name: <span name="name"><curiosity>MONSTER HUNTER: WORLD</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','CAPCOM Co.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> CAPCOM Co. </a><a onClick="sort('developer',' Ltd.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Ltd. </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','CAPCOM Co., Ltd.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> CAPCOM Co., Ltd. </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>24</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>7816</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>2020</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>4710</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>1611</curiosity></span></p>
+<p>price: <span name="price"><curiosity>2999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>2999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>169190</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>40858</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>582660</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Black Desert Online</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Pearl Abyss');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Pearl Abyss </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Kakao Games Europe B.V.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Kakao Games Europe B.V. </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>58</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>8119</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>300</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>977</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>560</curiosity></span></p>
+<p>price: <span name="price"><curiosity>999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>17300</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>6903</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>588430</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Fallout Shelter</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Bethesda Game Studios');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bethesda Game Studios </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Bethesda Softworks');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bethesda Softworks </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>73</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>2264</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>3492</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>104</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>6799</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>27599</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>4142</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>601150</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Devil May Cry 5</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','CAPCOM Co.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> CAPCOM Co. </a><a onClick="sort('developer',' Ltd.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Ltd. </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','CAPCOM Co., Ltd.');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> CAPCOM Co., Ltd. </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>95</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1184</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>110</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>807</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>123</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>36617</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>2097</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>755790</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Ring of Elysium</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Aurora Studio');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Aurora Studio </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','TCH Scarlet Limited');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> TCH Scarlet Limited </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>50</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>591</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>281</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>120</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>212</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>63295</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>19523</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>863550</curiosity></span></p>
+<p>name: <span name="name"><curiosity>HITMAN 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','IO Interactive A/S');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> IO Interactive A/S </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Warner Bros Interactive Entertainment');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Warner Bros Interactive Entertainment </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>90</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>891</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>552</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>471</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>501</curiosity></span></p>
+<p>price: <span name="price"><curiosity>9999</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>9999</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>25076</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>3019</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>1046930</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Dota Underlords</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Valve');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Valve </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>75</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','5,000,000 .. 10,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 5,000,000 .. 10,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>1606</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>164</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>257</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>91</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>65843</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>12137</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+<div name="game" style="width: 300px; display: inline-block; vertical-align: top; background: #FFFFFF; margin: 3px; padding: 10px; border-radius: 7px; border: 1px solid #C4C4C4;">
+<p>id: <span name="id"><curiosity>1085660</curiosity></span></p>
+<p>name: <span name="name"><curiosity>Destiny 2</curiosity></span></p>
+<p>developer: <span name="developer"><a onClick="sort('developer','Bungie');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bungie </a></span></p>
+<p>publisher: <span name="publisher"><a onClick="sort('publisher','Bungie');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> Bungie </a></span></p>
+<p>score_rank: <span name="score_rank"><curiosity>30</curiosity></span></p>
+<p>owners: <span name="owners"><a onClick="sort('owners','10,000,000 .. 20,000,000');" style="text-decoration:underline; cursor: pointer; margin-right:7px;"> 10,000,000 .. 20,000,000 </a></span></p>
+<p>average_forever: <span name="average_forever"><curiosity>3489</curiosity></span></p>
+<p>average_2weeks: <span name="average_2weeks"><curiosity>1360</curiosity></span></p>
+<p>median_forever: <span name="median_forever"><curiosity>368</curiosity></span></p>
+<p>median_2weeks: <span name="median_2weeks"><curiosity>387</curiosity></span></p>
+<p>price: <span name="price"><curiosity>0</curiosity></span></p>
+<p>initialprice: <span name="initialprice"><curiosity>0</curiosity></span></p>
+<p>discount: <span name="discount"><curiosity>0</curiosity></span></p>
+<p>positive: <span name="positive"><curiosity>171894</curiosity></span></p>
+<p>negative: <span name="negative"><curiosity>20468</curiosity></span></p>
+<p>userscore: <span name="userscore"><curiosity>0</curiosity></span></p>
+</div>
+</curiosity></div>
+
+
+<script language="javascript">
+function sort(sortBy,byDev='') {
+
+  var sortByDev = byDev;
+  var sort = sortBy;
+  var nodeList = document.querySelectorAll('div[name="game"]');
+  var itemsArray = [];
+  var parent = nodeList[0].parentNode;
+	
+  for (var i = 0; i < nodeList.length; i++) {    
+    itemsArray.push(parent.removeChild(nodeList[i]));
+  }	
+	
+	  itemsArray.sort(function(nodeA, nodeB) {
+		  var textA = nodeA.querySelector('span[name="'+sort+'"]').textContent;	 
+		  var textB = nodeB.querySelector('span[name="'+sort+'"]').textContent; 
+			var intA = parseInt(textA);
+			var intB = parseInt(textB);
+				  if (intA < intB) return -1;
+				  if (intA > intB) return 1; 
+				  if (textA < textB) return -1;
+				  if (textA > textB) return 1; 
+			  return 0; 
+
+		})
+		.forEach(function(node) {
+		  if(sortByDev==''){
+			  parent.appendChild(node);
+		  }else{
+		 	var textA = node.querySelector('span[name="'+sort+'"]').textContent;
+			if(textA.indexOf(sortByDev)!== -1) parent.appendChild(node);
+		  }
+
+		});
+
+	}
+
+	
+</script>
+</body>
+</html>
